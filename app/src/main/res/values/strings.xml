@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">Life Logger</string>
     <string name="title_activity_meal">MealActivity</string>
+    <string name="main">Main</string>
+    <string name="other">Other</string>
     <string name="large_text">
         "Material is the metaphor.\n\n"
 
@@ -91,4 +93,5 @@
         "when a user tries to pick up one of cards.\n\n"
     </string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_meals2">MealsActivity2</string>
 </resources>

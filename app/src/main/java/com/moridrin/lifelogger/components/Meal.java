@@ -2,7 +2,6 @@ package com.moridrin.lifelogger.components;
 
 import android.media.Image;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -13,12 +12,21 @@ public class Meal {
     private String name;
     private String recipe;
     private List<Image> images;
-    private List<Ingredient> ingredients;
+    private List<SingleIngredient> singleIngredients;
 
-    public Meal(String name, List<Ingredient> ingredients) {
+    public Meal(String name, List<SingleIngredient> singleIngredients) {
         this.name = name;
-        this.ingredients = ingredients;
+        this.singleIngredients = singleIngredients;
         meals.add(this);
+    }
+
+    public static Meal Get(String name) {
+        for (Meal meal : meals) {
+            if (meal.name == name) {
+                return meal;
+            }
+        }
+        return null;
     }
 
     public void addImage(Image image) {
@@ -29,15 +37,6 @@ public class Meal {
 
     public void setRecipe(String recipe) {
         this.recipe = recipe;
-    }
-
-    public static Meal Get(String name) {
-        for (Meal meal : meals) {
-            if (meal.name == name) {
-                return meal;
-            }
-        }
-        return null;
     }
 
     @Override

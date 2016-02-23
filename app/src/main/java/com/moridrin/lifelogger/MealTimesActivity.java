@@ -1,9 +1,8 @@
 package com.moridrin.lifelogger;
 
 import android.content.Intent;
-import android.support.v4.app.FragmentManager;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -29,6 +28,7 @@ public class MealTimesActivity extends AppCompatActivity {
         mealTimesList.add("Elevenses");
         mealTimesList.add("Luncheon");
         mealTimesList.add("Afternoon Tea");
+        mealTimesList.add("High Tea");
         mealTimesList.add("Dinner");
         mealTimesList.add("Supper");
         arrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, mealTimesList);
